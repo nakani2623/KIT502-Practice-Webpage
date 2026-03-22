@@ -7,94 +7,116 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
-        <nav class="navbar bg-body-tertiary">
+<body class="bg-light">
+    <nav class="navbar border-bottom">
         <div class="container-fluid">
             <a class="navbar-brand" href="index.html">W2026</a>
+
+            <ul class="navbar-nav flex-row">
+                <li class="nav-item mx-1">
+                    <a class="btn btn-outline-secondary" href="register.html" role="button">Register</a>
+                </li>
+                <li class="nav-item mx-1">
+                    <a class="btn btn-outline-secondary" href="details.html" role="button">Details</a>
+                </li>
+                  <li class="nav-item mx-1">
+                    <a class="btn btn-outline-secondary" href="manage_submission.html" role="button">Submission</a>
+                </li>
+            </ul>
         </div>
     </nav>
 
+    <main class="container my-3">
 
-    <form id="registrationForm" class="container m-5">
-        <div class="row g-3">
-            <h1 class="col-md-12">Conference Registration</h1>
+    <!-- Page header -->
+    <div class="p-4 p-md-5 bg-white border rounded-4 shadow-sm mb-4">
+        <h1 class="fw-bold text-forest mb-1">Conference Registration</h1>
+        <p class="text-muted mb-0">
+            Please fill out the form below to register for the 2026 Web Development Conference. Make sure to provide accurate information, as it will be used for communication and conference materials. We look forward to welcoming you to the conference!
+        </p>
+    </div>
 
-            <div class="col-md-6">
-                <label for="fname" class="form-label">First Name:</label>
-                <input type="text" class="form-control" id="fname" name="fname" placeholder="Enter first Name">
+    <div class="p-4 p-md-5 bg-white border rounded-4 shadow-sm mb-4">
+        <form id="registrationForm" class="container">
+            <div class="row g-3">
+                <div class="col-md-6">
+                    <label for="fname" class="form-label">First Name:</label>
+                    <input type="text" class="form-control" id="fname" name="fname" placeholder="Enter first Name">
 
-                <div id="fnameFeedback"></div>
-            </div>
-
-            <div class="col-md-6">
-                <label for="lname" class="form-label">Last Name:</label>
-                <input type="text" class="form-control" id="lname" name="lname" placeholder="Enter last Name">
-
-                <div id="lnameFeedback"></div>
-            </div>
-
-            <div class="col-md-12">
-                <label for="email" class="form-label">Email:</label>
-                <input type="email" class="form-control" id="email" name="email" placeholder="name@example.com">
-
-                <div id="emailFeedback"></div>
-            </div>
-
-            <div class="col-md-6">
-                <label for="password" class="form-label">Password:</label>
-                <input type="password" id="password" name="password" 
-                    minlength="7" maxlength="12" pattern="(?=.*[0-9])[A-Za-z0-9]{7,12}" 
-                    title="Password must contain 7 - 12 letters with at least one number"
-                    class="form-control"
-                    placeholder="Password">   
-
-                <div id="passwordFeedback"></div>
-            </div>
-            
-            <div class="col-md-6">
-                <label for="confirm_password" class="form-label">Confirm Password:</label>
-                <input type="password" id="confirm_password" name="confirm_password" 
-                    minlength="7" maxlength="12" pattern="(?=.*[0-9])[A-Za-z0-9]{7,12}" 
-                    title="Password must contain 7 - 12 letters with at least one number"
-                    class="form-control"
-                    placeholder="Confirm Password">
-
-                <div id="confirmPasswordFeedback"></div>
-            </div>
-        </div>
-
-        <div class="g-3">
-            <div class="col-md-12 my-3">
-                <label for="research_student">Research Student:</label>
-                <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="research" id="yes" value="yes">
-                    <label class="form-check-label" for="yes">Yes</label>
+                    <div id="fnameFeedback"></div>
                 </div>
 
-                <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="research" id="no" value="no">
-                    <label class="form-check-label" for="no">No</label>
+                <div class="col-md-6">
+                    <label for="lname" class="form-label">Last Name:</label>
+                    <input type="text" class="form-control" id="lname" name="lname" placeholder="Enter last Name">
+
+                    <div id="lnameFeedback"></div>
                 </div>
 
-                <div id="statusError" class="d-none">Please select an option</div>
+                <div class="col-md-12">
+                    <label for="email" class="form-label">Email:</label>
+                    <input type="email" class="form-control" id="email" name="email" placeholder="name@example.com">
+
+                    <div id="emailFeedback"></div>
+                </div>
+
+                <div class="col-md-6">
+                    <label for="password" class="form-label">Password:</label>
+                    <input type="password" id="password" name="password" 
+                        minlength="7" maxlength="12" pattern="(?=.*[0-9])[A-Za-z0-9]{7,12}" 
+                        title="Password must contain 7 - 12 letters with at least one number"
+                        class="form-control"
+                        placeholder="Password">   
+
+                    <div id="passwordFeedback"></div>
+                </div>
+                
+                <div class="col-md-6">
+                    <label for="confirm_password" class="form-label">Confirm Password:</label>
+                    <input type="password" id="confirm_password" name="confirm_password" 
+                        minlength="7" maxlength="12" pattern="(?=.*[0-9])[A-Za-z0-9]{7,12}" 
+                        title="Password must contain 7 - 12 letters with at least one number"
+                        class="form-control"
+                        placeholder="Confirm Password">
+
+                    <div id="confirmPasswordFeedback"></div>
+                </div>
             </div>
 
+            <div class="g-3">
+                <div class="col-md-12 my-3">
+                    <label for="research_student">Research Student:</label>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="research" id="yes" value="yes">
+                        <label class="form-check-label" for="yes">Yes</label>
+                    </div>
 
-            <div class="col-md-12 my-3">
-                <label for="terms">Accept Terms and Conditions:</label>
-                <input type="checkbox" id="check" name="terms"><br>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="research" id="no" value="no">
+                        <label class="form-check-label" for="no">No</label>
+                    </div>
 
-                <div id="termsError" class="d-none">You must accept the terms and conditions</div>
+                    <div id="statusError" class="d-none">Please select an option</div>
+                </div>
+
+
+                <div class="col-md-12 my-3">
+                    <label for="terms">Accept Terms and Conditions:</label>
+                    <input type="checkbox" id="check" name="terms"><br>
+
+                    <div id="termsError" class="d-none">You must accept the terms and conditions</div>
+                </div>
+
+
+
+                <a class="btn  btn-outline-secondary m-2" href="index.html" role="button">Cancel</a>
+                <input type="submit" class="btn btn-primary m-2" value="Submit">
+
             </div>
 
-
-
-            <a class="btn  btn-outline-secondary m-2" href="index.html" role="button">Cancel</a>
-            <input type="submit" class="btn btn-primary m-2" value="Submit">
-
-        </div>
-
-    </form>
+        </form>
+    </div>
+    </main>
 <script src="script.js"></script>
 </body>
 </html>

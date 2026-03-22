@@ -32,3 +32,12 @@ input {
     border: 1px solid black;
     border-radius: 8px;
 }
+
+#statusError, #termsError {
+    color: #dc3545;
+    font-size: 0.9em;
+}
+
+/* .content_wrapper {
+    max-width: 900px;
+} */
